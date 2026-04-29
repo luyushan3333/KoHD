@@ -35,7 +35,7 @@ You can refer to (https://github.com/HUANGLIZI/LViT) to download the dataset.
 │   │   ├── Val_text.xlsx
 │   │   ├── Test_text.xlsx
 │   │   ├── Test_text_split.xlsx
-│   ├── Kvasir_seg
+│   ├── Kvasir
 │   │   ├── Train_Folder
 │   │   ├── Val_Folder
 │   │   ├── Test_Folder
