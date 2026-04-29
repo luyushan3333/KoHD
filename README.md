@@ -8,7 +8,7 @@ conda activate KoHD
 pip install -r requirements.txt
 ```
 # 2. Dataset
-You can refer to (https://github.com/HUANGLIZI/LViT) to download the dataset.
+You can refer to LViT (https://github.com/HUANGLIZI/LViT) to download the dataset.
 ```bash
 ├── ./datasets
 │   ├── Covid19
@@ -55,4 +55,4 @@ To test a model,
 python ./code/test.py  
 ```
 # Acknowledgements
-Our code is largely based on (https://github.com/HUANGLIZI/LViT). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
+Our code is largely based on LViT (https://github.com/HUANGLIZI/LViT). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
