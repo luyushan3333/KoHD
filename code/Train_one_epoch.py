@@ -37,9 +37,8 @@ class RegionCountLoss_box(nn.Module):
         self.criterion = WeightedDiceBCE(dice_weight=0.5, BCE_weight=0.5)
 
     def forward(self, pred, target):
-        center_pred,box_pred=create_centroid_mask_batch(pred)
         center_mask,box_mask=create_centroid_mask_batch(target)
-        loss_box=self.criterion(1-(1-pred)*(1-box_pred),1-(1-target)*(1-box_mask))
+        loss_box=self.criterion(pred,1-(1-target)*(1-box_mask))
 
         return loss_box
 class RegionCountLoss_point(nn.Module):
@@ -49,7 +48,6 @@ class RegionCountLoss_point(nn.Module):
         self.criterion = WeightedDiceBCE(dice_weight=0.5, BCE_weight=0.5)
 
     def forward(self, pred, target):
-        #center_pred,box_pred=create_centroid_mask_batch(pred)
         center_mask,box_mask=create_centroid_mask_batch(target)
         loss_box=self.criterion(pred,center_mask)
         return loss_box
